@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('styles', function() {
-  return gulp.src('scss/main.scss')
+  return gulp.src('src/scss/main.scss')
     .pipe(sass({style: 'compressed', errLogToConsole: true}))
     .pipe(concat('main.css'))
     .pipe(minifycss())
@@ -50,7 +50,7 @@ gulp.task('javascripts', function(){
     'bower_components/foundation/js/foundation/foundation.topbar.js',
 
     // moving on...
-    'javascript_sources/*.js'])                   // Gets all the user JS _*.js from assets/js
+    'src/js/*.js'])                   // Gets all the user JS _*.js from assets/js
     .pipe(concat('scripts.js'))               // Concat all the scripts
     .pipe(rename({suffix: '.min'}))             // Rename it
     .pipe(uglify())                     // Uglify(minify)
@@ -81,8 +81,8 @@ gulp.task('watch', function(){
     livereload.listen();
 
     // Watch
-    gulp.watch('scss/*.scss', ['styles']);
-    gulp.watch('javascript_sources/*.js', ['javascripts']);
+    gulp.watch('src/scss/*.scss', ['styles']);
+    gulp.watch('src/js/*.js', ['javascripts']);
 
 
     // Watch any files in dist/, reload on change
