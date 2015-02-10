@@ -1,0 +1,23 @@
+{
+  "name": "Quick and dirty gulp & foundation",
+  "version": "0.0.1",
+  "authors": [
+    "Simen Schikulski <simen@joss.as>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1"
+  }
+}
